@@ -2,19 +2,18 @@ package br.com.carolinavn.taskmanager.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import br.com.carolinavn.taskmanager.model.Task;
 import br.com.carolinavn.taskmanager.repository.TaskRepository;
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
+
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class TaskService {
 
-    @Autowired
     private TaskRepository taskRepository;
 
     public Task createTask (Task task){

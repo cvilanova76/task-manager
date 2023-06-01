@@ -1,5 +1,6 @@
 package br.com.carolinavn.taskmanager.model;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -33,15 +34,15 @@ public class Task {
     private String description;
 
     @Column(nullable = false)
-    private Date deadline;
+    private LocalDateTime deadline;
 
     @CreationTimestamp
     @Column(name = "createdAt", nullable = false, updatable = false)
-    private Date createdAt;
+    private LocalDateTime createdAt;
 
     @UpdateTimestamp
     @Column(name = "updatedAt")
-    private Date updatedAt;
+    private LocalDateTime updatedAt;
     
 
 }
