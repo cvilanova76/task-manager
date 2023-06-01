@@ -35,6 +35,7 @@ public class Task {
     @Column(nullable = false)
     private Date deadline;
 
+    @CreationTimestamp
     @Column(name = "createdAt", nullable = false, updatable = false)
     private Date createdAt;
 
