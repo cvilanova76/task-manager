@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import br.com.carolinavn.taskmanager.model.entities.Task;
 
-import br.com.carolinavn.taskmanager.model.Task;
 import br.com.carolinavn.taskmanager.repository.TaskRepository;
 import lombok.AllArgsConstructor;
 
