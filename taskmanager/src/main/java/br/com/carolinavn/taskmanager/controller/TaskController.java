@@ -22,14 +22,14 @@ import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
 @Controller
-@RequestMapping("/tasks")
+@RequestMapping
 @AllArgsConstructor
 @Log4j2
 public class TaskController {
 
     TaskService taskService;
 
-   @GetMapping("/new-task")
+   @GetMapping("/tasks")
     public String createTask(Model model){
         model.addAttribute("task", new Task());
         return "tasks";

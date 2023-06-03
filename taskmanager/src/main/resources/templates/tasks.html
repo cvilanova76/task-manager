@@ -40,7 +40,7 @@
             <!-- Dropdown menu -->
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
-                <a class="dropdown-item" href="tasks/new-task">Nova tarefa</a>
+                <a class="dropdown-item" href="tasks">Nova tarefa</a>
               </li>
               <li>
                 <a class="dropdown-item" href="tasks/list-tasks">Listar tarefa</a>
@@ -58,7 +58,7 @@
   <div class="container mt-3">
 
     <div class="card">
-      <div class="card-header">Cadastro de tarefas</div>
+      <div class="card-header">Identificação</div>
       <div class="card-body">
         <form th:action="@{/tasks}" method="post" th:object="${task}">
           <div class="row" style="--bs-gap: .25rem 1rem;">
@@ -70,24 +70,54 @@
             </div>
             <div class="col-4">
               <div class="form-outline">
-                <input type="email" id="email" class="form-control" th:field="*{email}"/>
+                <input type="email" id="email" class="form-control" th:field="*{email}" />
                 <label class="form-label" for="email">E-mail</label>
               </div>
             </div>
           </div>
-          
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn btn-dark">Salvar</button>
-            <button type="reset" class="btn btn-light" data-mdb-ripple-color="dark">Cancelar</button>
-          </div>
-        </form>
+      </div>
+      <div class="card-header">Cadastro de tarefas</div>
+      <div class="card-body">
+        <div class="form-outline mb-4">
+          <input type="text" id="title" class="form-control" th:field="*{title}" />
+          <label class="form-label" for="title">Título</label>
+        </div>
+        <!-- Message input -->
+        <div class="form-outline mb-4">
+          <textarea class="form-control" id="description" rows="2" th:field="*{description}"></textarea>
+          <label class="form-label" for="description">Descrição</label>
+        </div>
+        <!-- Number input -->
+        <div class="form-outline mb-4">
+          <input type="date" id="deadline" class="form-control" th:field="*{deadine}" />
+          <label class="form-label" for="deadline">Deadline</label>
+        </div>
+        <!-- Number input -->
+        <div class="form-outline mb-4">
+          <input type="date" id="createdAt" class="form-control" th:field="*{createdAt}" />
+          <label class="form-label" for="createdAt">Criado em</label>
+        </div>
+
+        <!-- Number input -->
+        <div class="form-outline mb-4">
+          <input type="date" id="updatedAt" class="form-control" th:field="*{updatedAt}" />
+          <label class="form-label" for="updatedAt">Atualizado em</label>
+        </div>
+
 
       </div>
 
+      <div class="text-center">
+        <button type="submit" class="btn btn-dark">Salvar</button>
+        <button type="reset" class="btn btn-light" data-mdb-ripple-color="dark">Cancelar</button>
+      </div>
+      </form>
+
     </div>
-    <!-- MDB -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
+
+  </div>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
 </body>
 
 </html>
